@@ -37,12 +37,18 @@ public class DragonFight {
 				// or a kick
 	String answer=JOptionPane.showInputDialog("Do you want to kick or yell");
 				// 4. If they typed in "yell":
-	if
+	if(answer.equalsIgnoreCase("Yell")) {
+		playerAttack=ran.nextInt(10);
+		dragonHealth-=playerAttack;
+	}
 					// -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					// ran.nextInt(10)
 		
 					// -- Subtract the player attack value from the dragon's health
-	
+	if(answer.equalsIgnoreCase("Kick")) {
+		playerAttack=ran.nextInt(25);
+		dragonHealth-=playerAttack;
+	}
 				// 5. If they typed in "kick":
 	
 					// -- Find a random number between 0 and 25 and store it in playerAttack.
@@ -50,7 +56,8 @@ public class DragonFight {
 					// -- Subtract the player attack value from the dragon's health
 
 			// THE DRAGON RETALIATES
-
+dragonAttack=ran.nextInt(25);
+playerHealth-=dragonAttack;
 				// 6. Find a random number between 0 and 35 and store it in dragonAttack
 	
 				// 7. Subtract the dragon attack value from the player's health
@@ -59,12 +66,16 @@ public class DragonFight {
 
 				// 8. If the player's health is less than or equal to 0
 				// call the playerLost() method
-	
+	if(playerHealth<=0) {
+		playerLost();
+	}
 			
 				// 9. Else if the dragon's health is less than or equal to 0
 				// call the dragonLost() method
 
-			
+	if(dragonHealth<=0) {
+		dragonLost();
+	}
 			// 10.  Pop up a message that tells the player the health levels of player and
 			// 		dragon.
 
