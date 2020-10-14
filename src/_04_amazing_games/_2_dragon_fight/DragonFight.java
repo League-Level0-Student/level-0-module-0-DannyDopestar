@@ -78,7 +78,7 @@ playerHealth-=dragonAttack;
 	}
 			// 10.  Pop up a message that tells the player the health levels of player and
 			// 		dragon.
-
+JOptionPane.showMessageDialog(null," playerhealth "+ playerHealth + " \ndragonhealth " + dragonHealth);
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
@@ -89,7 +89,7 @@ playerHealth-=dragonAttack;
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+JOptionPane.showMessageDialog("You lost")
 
 		System.exit(0);   //This code ends the program
 	}
